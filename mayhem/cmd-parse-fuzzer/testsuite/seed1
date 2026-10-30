@@ -1,0 +1,2 @@
+set -g status-style "fg=red,bg=blue"
+bind-key -T prefix C-a send-prefix

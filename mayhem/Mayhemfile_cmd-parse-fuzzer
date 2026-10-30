@@ -1,0 +1,10 @@
+project: savantenvs/tmux
+target: cmd-parse-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cmd-parse-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/cmd-parse-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/fuzz/cmd-parse-fuzzer.dict
+    timeout: 10

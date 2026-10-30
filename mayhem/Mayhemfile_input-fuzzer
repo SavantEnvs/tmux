@@ -1,0 +1,10 @@
+project: savantenvs/tmux
+target: input-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/input-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/input-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/fuzz/input-fuzzer.dict
+    timeout: 10

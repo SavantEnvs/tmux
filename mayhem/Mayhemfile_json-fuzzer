@@ -1,0 +1,10 @@
+project: savantenvs/tmux
+target: json-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/json-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/fuzz/json-fuzzer.dict
+    timeout: 10

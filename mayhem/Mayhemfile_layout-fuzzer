@@ -1,0 +1,10 @@
+project: savantenvs/tmux
+target: layout-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/layout-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/layout-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/fuzz/layout-fuzzer.dict
+    timeout: 10

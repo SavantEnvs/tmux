@@ -1,0 +1,1 @@
+display-message -p '#{window_index}: #{pane_title}' ; select-window -t :1

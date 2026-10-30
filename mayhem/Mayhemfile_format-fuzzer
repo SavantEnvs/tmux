@@ -1,0 +1,10 @@
+project: savantenvs/tmux
+target: format-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/format-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/format-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/fuzz/format-fuzzer.dict
+    timeout: 10

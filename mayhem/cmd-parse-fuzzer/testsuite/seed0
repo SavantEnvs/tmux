@@ -1,0 +1,2 @@
+new-session -d -s main
+split-window -h 'echo hi'

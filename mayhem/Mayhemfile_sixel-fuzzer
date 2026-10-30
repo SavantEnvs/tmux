@@ -1,0 +1,10 @@
+project: savantenvs/tmux
+target: sixel-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sixel-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/sixel-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/fuzz/sixel-fuzzer.dict
+    timeout: 10
